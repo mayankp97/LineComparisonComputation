@@ -20,6 +20,11 @@ namespace LineComparisonComputation
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Line Comparison Computation Program");
+
+            var line1 = new Line { X1 = 0, X2 = 0, Y1 = 1, Y2 = 1 };
+            var line2 = new Line { X1 = 0, X2 = 0, Y1 = -1, Y2 = -1 };
+            Console.WriteLine(line1.Equals(line2) ? "Lines are Equal" : "Lines are Not Equal");
+
         }
     }
 }
