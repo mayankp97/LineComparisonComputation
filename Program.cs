@@ -23,7 +23,8 @@ namespace LineComparisonComputation
 
             var line1 = new Line { X1 = 0, X2 = 0, Y1 = 1, Y2 = 1 };
             var line2 = new Line { X1 = 0, X2 = 0, Y1 = -1, Y2 = -1 };
-            Console.WriteLine(line1.Equals(line2) ? "Lines are Equal" : "Lines are Not Equal");
+            Console.WriteLine(line1.Length().Equals(line2.Length()) ? "Lines are Equal" : (line1.Length() > line2.Length() ? "Line 1 is Greater than Line 2" : "Line 2 is Greater than Line1"));
+            
 
         }
     }
