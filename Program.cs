@@ -27,7 +27,10 @@ namespace LineComparisonComputation
 
             var line1 = new Line { P1 = new Point {X = 0, Y = 0 }, P2 = new Point {X=1, Y=1 } };
             var line2 = new Line { P1 = new Point { X = 0, Y = 0 }, P2 = new Point { X = -1, Y = -1 } };
-            Console.WriteLine(line1.Length().Equals(line2.Length()) ? "Lines are Equal" : (line1.Length() > line2.Length() ? "Line 1 is Greater than Line 2" : "Line 2 is Greater than Line1"));
+            if (line1.Length().Equals(line2.Length()))
+                Console.WriteLine("Lines are Equal");
+            else
+                Console.WriteLine(line1.Length().CompareTo(line2.Length() > 0  ? "Line 1 is Greater than Line 2" : "Line 2 is Greater than Line1"));
             
 
         }
